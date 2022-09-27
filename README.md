@@ -17,8 +17,11 @@ Magic | 6 bytes | "ABLINK"
 
 ## File information
 ##### Currently, I've found that starting right after the header, there are filename labels, that are each 12 bytes long. Of those 12 bytes:
-1 & 2 I dont now
-3 & 4 seem to indicate a growing number
-5 - 12 Filename that's null terminated
+
+Name | Size |
+--- | --- 
+?? | 2 bytes
+Growing number | 2 bytes
+Null terminated filename | 8 bytes
 
 (To create this readme, I used https://github.com/DanOl98/MagesPack/blob/master/README.md as a reference)
