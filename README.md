@@ -20,7 +20,7 @@ Magic | 6 bytes | "ABLINK"
 
 Name | Size |
 --- | --- 
-?? | 2 bytes
+Compression (boolean)??? | 2 bytes
 Growing number | 2 bytes
 Null terminated filename | 8 bytes
 
