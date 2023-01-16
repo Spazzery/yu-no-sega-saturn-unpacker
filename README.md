@@ -1,6 +1,8 @@
 # yu-no-sega-saturn-unpacker
 Unpacker for the *images* of a Sega Saturn game called "Yu-No: The Girl Who Chants Love At The Bound of This World".
-Specifically, for an archive called GRAPH.ABL.
+Specifically, for an archive called GRAPH.ABL inside the game files.
+This program only unpacks the custom image files used by the game.
+To extract conventional format images (BMP, PNG) out of the custom image files, I need to find some other tool/program for it. If I do, I'll link this here.
 
 # Structure
 
@@ -41,7 +43,7 @@ This repeats for 1587 + 1 times (last File info is empty, with no filename and n
 * 4 ABSABT files
 Total: 1587 files
 
-Note: ABSABT files are like small archives, that house even smaller files inside of them. They have their own nametable and files inside of them)
+Note: ABSABT files are like small archives, that house even smaller files inside of them. They have their own nametable and files inside of them. I didn't bother extracting them with this program, but it probably isn't too hard to extract them too, if needed.
 
 # Usage
 Requirement: You need to have Python 3 installed.
