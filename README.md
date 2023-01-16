@@ -55,4 +55,5 @@ To extract the contents of the GRAPH.ABL file, just run "extract_contents.py" in
 
 Note about extraction: since there are filenames that are repeating (for example, 0050), I had to append their file type to their name. Otherwise they would've overwritten themselves during extraction. If you want to remove those file types from the file names, I suggest using a free program, like ReNamer.
 
-(To create this readme, I used https://github.com/DanOl98/MagesPack/blob/master/README.md as a reference)
+# Small thanks
+To create this readme, I used https://github.com/DanOl98/MagesPack/blob/master/README.md as a reference.
