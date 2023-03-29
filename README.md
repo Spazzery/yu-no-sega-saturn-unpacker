@@ -26,7 +26,7 @@ Name | Size | Values
 --- | --- | ---
 Null terminated filename | 8 bytes | 
 Resolution? | 2 bytes | Either 256, 1024 or 2816
-Index? | 2 bytes | Some growing number, but I couldn't find any consistency to it (first 5 numbers, for example, are 10, 25, 43, 54, 72, etc.)
+Offset | 2 bytes | Offset, in clusters (To find the offset inside the archive, multiply by 2048. For example: first file's offset value is 10. So 10 * 2048 = 20480)
 
 This repeats for 1587 + 1 times (last File info is empty, with no filename and no resulution value, only and index. Maybe it's used for padding).
 
@@ -35,6 +35,7 @@ This repeats for 1587 + 1 times (last File info is empty, with no filename and n
 
 ## Raw file data
 ##### There are 4 different file types: ABZABG, ABZABA, ABSABG and ABSABT. They are in the respective order in the archive:
+
 * 1220 ABZABG files
 * 286 ABZABA files
 * 5 ABZABG files
@@ -42,6 +43,8 @@ This repeats for 1587 + 1 times (last File info is empty, with no filename and n
 * 62 ABZABG files
 * 4 ABSABT files
 Total: 1587 files
+
+ABZABG files contain CGs, backgrounds (LZ77 compressed); ABZABA files contain animation instructions; ABSABG files are uncompressed; ABSABT are small archives that contain ABSABG files and animation files. 
 
 Note: ABSABT files are like small archives, that house even smaller files inside of them. They have their own nametable and files inside of them. I didn't bother extracting them with this program, but it probably isn't too hard to extract them too, if needed.
 
